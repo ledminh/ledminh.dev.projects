@@ -1,7 +1,7 @@
-import type { Project as ProjectType } from "@/types";
+import type { ProjectSummary } from "@/types";
 
 interface Props {
-  projects: ProjectType[];
+  projects: ProjectSummary[];
 }
 export default function ProjectList({ projects }: Props) {
   return (
