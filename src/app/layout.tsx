@@ -17,9 +17,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <h1>PROJECTS</h1>
-        <h6>An exhaustive list of my projects</h6>
-        <main>{children}</main>
+        <div className="p-8 grid gap-8">
+          <header className="grid gap-4">
+            <h1>PROJECTS</h1>
+            <h6 className="bg-gray-700 pl-4">
+              An exhaustive list of my projects
+            </h6>
+          </header>
+          <main>{children}</main>
+        </div>
       </body>
     </html>
   );
