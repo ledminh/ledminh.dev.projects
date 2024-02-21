@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <p className="bg-yellow-800/80 text-gray-300 p-4 rounded-xl font-light italic">
+    <p className="bg-yellow-700 text-slate-200 p-4 rounded-xl font-light italic">
       Hello, I have a passion for coding, particularly in web development. Over
       seven years of learning and experimenting with it, I have created numerous
       projects but have not always prioritized maintaining or showcasing them.
