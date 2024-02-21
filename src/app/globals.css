@@ -14,6 +14,16 @@ h2 {
   @apply text-4xl font-bold;
 }
 
+h3 {
+  @apply text-2xl font-bold;
+}
+
 h6 {
   @apply text-lg font-bold;
+}
+
+.html_content {
+  p {
+    @apply mb-4 indent-8;
+  }
 }
