@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import ScreenshotItem from "@/ui/ScreenshotItem";
+
 import getProjectBySlug from "@/core/getProjectBySlug";
 
 type Props = {
@@ -111,19 +113,12 @@ export default async function ProjectPage({ params }: Props) {
           }}
         />
       </div>
-      <div className="grid gap-2">
+      <div className="grid gap-4">
         <h3 className="border-b border-gray-400">Screenshots</h3>
         <ul className="flex flex-wrap gap-2">
           {project.screenshots.map((screenshot) => (
             <li key={screenshot.id}>
-              <button className="border border-gray-100 rounded-lg w-20 h-20 overflow-hidden">
-                <Image
-                  src={screenshot.src}
-                  alt={screenshot.alt}
-                  width={200}
-                  height={200}
-                />
-              </button>
+              <ScreenshotItem screenshot={screenshot} />
             </li>
           ))}
         </ul>
