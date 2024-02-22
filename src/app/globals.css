@@ -24,6 +24,14 @@ h6 {
 
 .html_content {
   p {
-    @apply mb-4 indent-8;
+    @apply mb-4;
+  }
+
+  ul {
+    @apply list-disc pl-8;
+  }
+
+  a {
+    @apply text-blue-400 underline;
   }
 }

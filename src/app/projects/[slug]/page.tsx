@@ -71,8 +71,10 @@ export default async function ProjectPage({ params }: Props) {
             <h3 className="hidden md:block">Intro</h3>
             <p className="font-mono">{project.description}</p>
           </div>
-          <div className="flex flex-col gap-2 border-b border-b-gray-500 pb-4">
-            <h3>Tech Stack</h3>
+          <div className="flex flex-col gap-4 sm:border-b sm:border-b-gray-500 pb-4">
+            <h3 className="border-b border-b-gray-500 sm:border-b-0">
+              Tech Stack
+            </h3>
             <ul className="flex flex-wrap gap-2">
               {project.techStack.map((tech) => (
                 <li
@@ -101,7 +103,7 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </div>
       <div className="grid gap-2">
-        <h3 className="border-b border-gray-400">Details</h3>
+        <h3 className="border-b border-gray-500">Details</h3>
         <div
           className="html_content"
           dangerouslySetInnerHTML={{
