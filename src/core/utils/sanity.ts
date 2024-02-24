@@ -67,7 +67,7 @@ export function toProject(project: any): Project {
       serializers: serializers,
     }),
     screenshots: project.screenshots.map((screenshot: any) => ({
-      id: screenshot._id,
+      id: screenshot._key,
       src: urlFor(screenshot).width(1000).url(),
       alt: "screenshot for " + project.name,
     })),

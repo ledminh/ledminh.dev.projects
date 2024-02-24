@@ -10,7 +10,6 @@ export default async function Home() {
     <div className="grid gap-8">
       <About />
       <ProjectList projects={projects} />
-
       <BackToTop />
     </div>
   );

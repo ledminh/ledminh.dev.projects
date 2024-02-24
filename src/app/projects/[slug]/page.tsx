@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import ScreenshotItem from "@/ui/ScreenshotItem";
+
 import getProjectBySlug from "@/core/getProjectBySlug";
 
 type Props = {
@@ -71,8 +73,10 @@ export default async function ProjectPage({ params }: Props) {
             <h3 className="hidden md:block">Intro</h3>
             <p className="font-mono">{project.description}</p>
           </div>
-          <div className="flex flex-col gap-2 border-b border-b-gray-500 pb-4">
-            <h3>Tech Stack</h3>
+          <div className="flex flex-col gap-4 sm:border-b sm:border-b-gray-500 pb-4">
+            <h3 className="border-b border-b-gray-500 sm:border-b-0">
+              Tech Stack
+            </h3>
             <ul className="flex flex-wrap gap-2">
               {project.techStack.map((tech) => (
                 <li
@@ -101,7 +105,7 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </div>
       <div className="grid gap-2">
-        <h3 className="border-b border-gray-400">Details</h3>
+        <h3 className="border-b border-gray-500">Details</h3>
         <div
           className="html_content"
           dangerouslySetInnerHTML={{
@@ -109,19 +113,12 @@ export default async function ProjectPage({ params }: Props) {
           }}
         />
       </div>
-      <div className="grid gap-2">
+      <div className="grid gap-4">
         <h3 className="border-b border-gray-400">Screenshots</h3>
         <ul className="flex flex-wrap gap-2">
           {project.screenshots.map((screenshot) => (
             <li key={screenshot.id}>
-              <button className="border border-gray-100 rounded-lg w-20 h-20 overflow-hidden">
-                <Image
-                  src={screenshot.src}
-                  alt={screenshot.alt}
-                  width={200}
-                  height={200}
-                />
-              </button>
+              <ScreenshotItem screenshot={screenshot} />
             </li>
           ))}
         </ul>

@@ -16,7 +16,7 @@ export default function ProjectList({ projects }: Props) {
             <div className="bg-slate-800 rounded-xl p-4 col-span-2 border border-transparent group-hover:border-slate-400 transition-border duration-300 ease-in-out sm:col-span-1 sm:row-span-2 sm:h-16 sm:flex sm:item-center">
               <h2 className="text-lg sm:text-xl">{project.name}</h2>
             </div>
-            <div className="col-span-3 flex justify-center items-center sm:p-2 sm:col-span-1 sm:row-span-4">
+            <div className="col-span-3 flex items-start sm:p-2 sm:col-span-1 sm:row-span-4">
               <p>{project.description}</p>
             </div>
           </Link>
