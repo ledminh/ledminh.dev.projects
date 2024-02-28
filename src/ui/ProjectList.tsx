@@ -6,7 +6,7 @@ interface Props {
 }
 export default function ProjectList({ projects }: Props) {
   return (
-    <ul className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <ul className="grid gap-8 lg:grid-cols-2">
       {projects.map((project) => (
         <li key={project.id}>
           <Link

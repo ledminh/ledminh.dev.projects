@@ -20,7 +20,7 @@ export type Project = {
   name: string;
   slug: string;
   description: string;
-  github: string;
+  github: string | null;
   demo: string;
   mainImageUrl: string;
   techStack: Tech[];

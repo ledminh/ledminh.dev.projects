@@ -53,12 +53,14 @@ export default async function ProjectPage({ params }: Props) {
         >
           Demo
         </Link>
-        <Link
-          href={project.github}
-          className="border border-yellow-500 p-2 hover:bg-yellow-700 hover:text-white transition-colors duration-300 ease-in-out"
-        >
-          GitHub
-        </Link>
+        {project.github && (
+          <Link
+            href={project.github}
+            className="border border-yellow-500 p-2 hover:bg-yellow-700 hover:text-white transition-colors duration-300 ease-in-out"
+          >
+            GitHub
+          </Link>
+        )}
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         <Image
@@ -95,12 +97,14 @@ export default async function ProjectPage({ params }: Props) {
             >
               Demo
             </Link>
-            <Link
-              href={project.github}
-              className="border border-yellow-500 p-2 hover:bg-yellow-700 hover:text-white transition-colors duration-300 ease-in-out"
-            >
-              GitHub
-            </Link>
+            {project.github && (
+              <Link
+                href={project.github}
+                className="border border-yellow-500 p-2 hover:bg-yellow-700 hover:text-white transition-colors duration-300 ease-in-out"
+              >
+                GitHub
+              </Link>
+            )}
           </div>
         </div>
       </div>
